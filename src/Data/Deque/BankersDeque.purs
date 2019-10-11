@@ -64,9 +64,9 @@ cons a (BankersDeque c lenf f lenr r) =
 head ∷ ∀ a. BankersDeque a → Maybe a
 head (BankersDeque _ _ f _ r) =
   case List.step f, List.step r of
-    Nil, Nil -> Nothing
-    Nil, (Cons a _) -> Just a
-    (Cons a _), _ -> Just a
+    Nil, Nil → Nothing
+    Nil, (Cons a _) → Just a
+    (Cons a _), _ → Just a
 
 tail ∷ ∀ a. BankersDeque a → Maybe (BankersDeque a)
 tail (BankersDeque c lenf f lenr r) =
